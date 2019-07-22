@@ -1,0 +1,66 @@
+.container{
+    background: rgb(236, 93, 93);
+}
+.image{
+    object-fit: cover;
+            width: 250px;
+            height: 250px;
+            margin:0;
+            float: left;
+}
+.text{
+    background: rgb(236, 196, 196);
+    width: 50%;
+    position: relative;
+    left: -7.5px;
+}
+p{
+    line-height: 1.6;
+    margin:10px;
+}
+.name{
+    background: rgba(145, 35, 40, 0.836);
+    padding: 20px;
+    width: 300px;
+    font-size: 30px;
+    position: relative;
+    left: 0px;
+}
+
+.score{
+    margin:40px;
+    background: rgb(236, 196, 196);
+    width: 200px;
+    height: 30px;
+    float: left;
+    /* position: absolute;
+    left: -425px; */
+}
+.totalScore{
+    margin:40px;
+    background: rgb(236, 196, 196);
+    width: 200px;
+    height: 150px;
+    float: left;
+    position: relative;
+    /* left: -440px;
+    bottom: -40px; */
+
+}
+.btn{
+    /* background-image: url(assets/images/heart.png) ;  */
+    width: 50px;
+    height: 50px;
+}
+.compGuess{
+    width: 20px;
+    height: 150px;
+    background: red;
+}
+.winLose{
+    width: 200px;
+    height: 150px;
+    background: blue;
+    margin-left: 20px;
+    padding-left: 0;
+}

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Crystal Game</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">    
+    
+    <link rel="stylesheet" href="assets/css/reset.css">
+    
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+</head>
+<body>
+<div class="container">
+
+    <div class="row name">
+        <div class="col-6">
+                CrystalCollector!
+        </div>
+    </div>
+
+    <div class="row-6 text">
+        <div class="col-6 text">
+                <p>You will be given a random number at the start of the game</p>
+                <p>There are four cryatals below. By clicking on a crystal you will add a specific amount of points to your total score. 
+                </p>
+                <p>You win the game by matching your total score to random number, you lose the game if your total score goes above the random number</p>
+                <p>The value of each crystal is hidden from you until you click on it</p>
+                <p>Each time when the game starts, the game wil change the value of each crystal</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-2 compGuess"></div>
+        <div class="col-1 winLose">
+            <p>Win: <span class = winScore> </span></p>
+            <p>Lose: <span class = loseScore> </span></p>
+        </div>
+    </div>
+
+    <div class="row-6 btns">
+        <div class="col-1 image heart" >
+                <button class="btn heartBtn"><img id="heart" src="assets/images/heart.png" alt="Italian Trulli"
+                    width="50" height="50"></button>
+        </div>
+
+        <div class="col-1  image sphere" >
+               <button class="btn sphereBtn" value="sphere"> <img id="sphere" src="assets/images/sphere.png" alt="sphere"
+                width="50" height="50"></button> 
+        </div>
+
+        <div class="col-1 image cube">
+                <button class="btn cubeBtn"> <img id="cube" src="assets/images/cube.svg" alt="Cube"
+                    width="50" height="50"></button> 
+        </div>
+
+        <div class="col-1 image diamond"> 
+            <button class="btn diamondBtn"> <img id="diamond" src="assets/images/diamond.svg" alt="diamond"
+                width="50" height="50"></button>
+                
+        </div>
+    </div>
+<br>
+
+    <div class="row">
+        <div class="col-3 score">
+            Your total score is:</div>
+        <div class="col-3 "></div>
+        <div class="col-3 "></div>
+        <div class="col-3 "></div>
+    </div>
+
+    <div class="row">
+            <div class="col-3 ">
+                 <p class="totalScore"></p></div>
+        </div>
+
+<script>
+
+// When the window loads, random numbers will be generated
+window.onload = function (){
+let heartNum= Math.floor(Math.random()*12)+1;
+let diamondNum = Math.floor(Math.random()*12)+1;
+let sphereNum = Math.floor(Math.random()*12)+1;
+let cubeNum = Math.floor(Math.random()*12)+1;
+
+// The scores and total scores are reset to 0
+let winScore = 0
+let loseScore = 0
+let totalScore = 0;
+
+// The computer guess is generated
+let compGuess = Math.floor((Math.random()*(120-19))) +19;
+$(".compGuess").text(compGuess);
+
+// When the button is clicked, we generate the id for the clicked button
+$('.btn').click(function(event){
+    const id = event.target.id
+
+    // if the heart button is clicked, add the number generated for it
+    if (id === "heart" && totalScore<compGuess){
+    totalScore= totalScore+ heartNum;
+    $(".totalScore").text(totalScore);
+    }
+    // if the sphere button is clicked, add the number generated for it
+    else if (id === "sphere" && totalScore<compGuess){
+        totalScore= totalScore+ sphereNum;
+    $(".totalScore").text(totalScore);
+    }
+    // if the cube button is clicked, add the number generated for it
+    else if (id === "cube" && totalScore<compGuess){
+        totalScore= totalScore+ cubeNum;
+    $(".totalScore").text(totalScore);
+    }
+    // if the diamond button is clicked, add the number generated for it
+
+    else if (id === "diamond" && totalScore<compGuess){
+        totalScore= totalScore+ diamondNum;
+    $(".totalScore").text(totalScore);
+    }
+    // wnen out score equals the computer score, we update out wins
+    else if  (totalScore===compGuess){
+    winScore++
+    totalScore = 0;
+    $(".winScore").text(winScore)
+    compGuess = Math.floor((Math.random()*(120-19))) +19;
+    $(".compGuess").text(compGuess);
+    
+    }
+    // when our score is more than the computer number, we update out looses
+    else {
+    loseScore++
+    totalScore = 0;
+    $(".loseScore").text(loseScore)
+    compGuess = Math.floor((Math.random()*(120-19))) +19;
+    $(".compGuess").text(compGuess);
+    totalScore = 0;
+    }
+    
+})
+}
+</script>
+
+</div>
+
+</div>
+    
+    <!-- https://gallery.yopriceville.com/Free-Clipart-Pictures/Hearts-PNG/Red_Crystal_Heart_PNG_Clip_Art_Image#.XTOFj5NKjBI
+    
+    http://www.clipartpanda.com/clipart_images/shared-by-ocal-2044654
+
+    https://publicdomainvectors.org/en/free-clipart/Green-cube-vector-illustration/4451.html
+
+    http://clipart-library.com/clipart/363377.htm
+
+    -->
+</body>
+</html>
