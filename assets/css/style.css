@@ -1,18 +1,13 @@
 .container{
     background: rgb(236, 93, 93);
 }
-.image{
-    object-fit: cover;
-            width: 250px;
-            height: 250px;
-            margin:0;
-            float: left;
-}
+
 .text{
     background: rgb(236, 196, 196);
     width: 50%;
-    position: relative;
-    left: -7.5px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    /* width: auto; */
 }
 p{
     line-height: 1.6;
@@ -28,39 +23,35 @@ p{
 }
 
 .score{
-    margin:40px;
     background: rgb(236, 196, 196);
     width: 200px;
     height: 30px;
-    float: left;
-    /* position: absolute;
-    left: -425px; */
+    margin-top: 20px;
 }
 .totalScore{
-    margin:40px;
     background: rgb(236, 196, 196);
     width: 200px;
     height: 150px;
-    float: left;
-    position: relative;
-    /* left: -440px;
-    bottom: -40px; */
+    margin-top: 20px;
 
 }
 .btn{
-    /* background-image: url(assets/images/heart.png) ;  */
     width: 50px;
     height: 50px;
+    margin-top: 20px;
+
 }
 .compGuess{
     width: 20px;
     height: 150px;
-    background: red;
+    background: rgb(236, 196, 196);
 }
 .winLose{
     width: 200px;
     height: 150px;
-    background: blue;
+    background: rgb(236, 196, 196);
     margin-left: 20px;
     padding-left: 0;
+    width: auto;
+
 }
