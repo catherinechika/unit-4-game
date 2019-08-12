@@ -1,57 +1,60 @@
 .container{
-    background: rgb(236, 93, 93);
+    background: rgb(240, 144, 151, 0.7);
+    font-family: 'Permanent Marker', cursive;
 }
 
 .text{
     background: rgb(236, 196, 196);
     width: 50%;
     margin-bottom: 20px;
-    margin-top: 20px;
-    /* width: auto; */
+    padding: 10px;
+    border-radius: 20%;
+    font-family: 'Permanent Marker', cursive;
+    box-shadow: 2px 2px;
+    margin: auto
+
 }
+
 p{
     line-height: 1.6;
     margin:10px;
+    border-radius: 30%;
+    font-family: 'Permanent Marker', cursive;
 }
+
+
 .name{
-    background: rgba(145, 35, 40, 0.836);
+    background: rgba(145, 35, 40, 0.44);
     padding: 20px;
     width: 300px;
     font-size: 30px;
     position: relative;
     left: 0px;
+    border-radius: 20%;
+    font-family: 'Permanent Marker', cursive;
+    margin: auto;
+    box-shadow: 3px 3px;
 }
 
-.score{
-    background: rgb(236, 196, 196);
-    width: 200px;
-    height: 30px;
-    margin-top: 20px;
-}
-.totalScore{
-    background: rgb(236, 196, 196);
-    width: 200px;
-    height: 150px;
-    margin-top: 20px;
 
-}
 .btn{
     width: 50px;
     height: 50px;
     margin-top: 20px;
+    border-radius: 20%;
+    margin-left: 400px;
+}
 
-}
-.compGuess{
-    width: 20px;
-    height: 150px;
-    background: rgb(236, 196, 196);
-}
-.winLose{
+
+.compGuess, .winLose, .totalScore, .score{
     width: 200px;
     height: 150px;
     background: rgb(236, 196, 196);
-    margin-left: 20px;
-    padding-left: 0;
-    width: auto;
-
+    border-radius: 20%;
+    font-family: 'Permanent Marker', cursive;
+    padding: 20px;
+    text-align: center;
+    margin: auto;
+    box-shadow: 2px 2px;
 }
+ 
