@@ -31,24 +31,48 @@
 
         <div class="row name">
             <div class="col-6">
-                CrystalCollector!
+                <h3>Youero </h3>
             </div>
         </div>
 
         <div class="row text">
             <div class="col text">
                 <p>You will be given a random number at the start of the game</p>
+                <h1>--------------------------------------------------</h1>
                 <p>There are four cryatals below. By clicking on a crystal you will add a specific amount of points to
                     your total score.
                 </p>
+                <h1>--------------------------------------------------</h1>
+
                 <p>You win the game by matching your total score to random number, you lose the game if your total score
                     goes above the random number</p>
+                <h1>--------------------------------------------------</h1>
+
                 <p>The value of each crystal is hidden from you until you click on it</p>
+                <h1>--------------------------------------------------</h1>
+
                 <p>Each time when the game starts, the game wil change the value of each crystal</p>
             </div>
         </div>
-
         <div class="row btns">
+            <div class="col-1 image heart">
+                <button class="btn heartBtn" id='heart'>1</button>
+            </div>
+
+            <div class="col-1  image sphere">
+                <button class="btn sphereBtn" id='sphere'>2</button>
+            </div>
+
+            <div class="col-1 image cube">
+                <button class="btn cubeBtn" id='cube'>3</button>
+            </div>
+
+            <div class="col-1 image diamond">
+                <button class="btn diamondBtn" id='diamond'>4</button>
+
+            </div>
+        </div>
+        <!-- <div class="row btns">
             <div class="col-1 image heart">
                 <button class="btn heartBtn"><img id="heart" src="assets/images/heart.png" alt="Italian Trulli"
                         width="50" height="50"></button>
@@ -69,11 +93,16 @@
                         width="50" height="50"></button>
 
             </div>
-        </div>
+        </div> -->
 
         <div class="row">
             <div class="col-2 compGuess"></div>
-            <div class="col-1 winLose">
+
+            <div class="col-2 score">
+                <h2>Your total score is: <span class="totalScore"> 0</span></h2>
+            </div>
+
+            <div class="col-2 winLose">
                 <p>Win: <span class=winScore> </span></p>
                 <p>Lose: <span class=loseScore> </span></p>
             </div>
@@ -81,13 +110,7 @@
 
 
 
-        <div class="row score">
-            <h1>Your total score is:</h1>
-        </div>
 
-        <div class="row totalScore">
-            0
-        </div>
     </div>
 
 
